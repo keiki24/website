@@ -1,0 +1,46 @@
+header h1.logo{
+	text-align: center;
+	font-size: 30pt;
+	background-color: #eeeeee;
+}
+
+body{
+    font-family: 'Georgia', serif;
+    color:#3E4349;
+}
+
+body p{
+	font-size: 14pt
+}
+
+body h1{
+	font-size: 24pt;
+	text-align: left;
+}
+
+p.login {
+	text-align: left;	
+}
+
+p.username {
+	text-align: left;
+}
+
+p.passwd {
+	text-align: left;
+}
+
+p.submit {
+	text-align: left;	
+}
+
+#nav {
+    position: absolute;
+    top: 100px;
+    left: 5px;
+    width: 10em;
+}
+
+#content {
+    margin-left: 10em;
+}

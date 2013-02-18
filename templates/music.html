@@ -1,0 +1,38 @@
+{% extends "base_test.html" %}
+{% block body %}
+    <div class="span4">
+    <h2>Music content is belong to this site, so you have to reade below the article</h2>
+    <p>Music:</p>
+    <audio controls src="/static/music/music1.mp3"></audio>
+    <ul>
+    {% for song in songs %}
+        <li><a onclick="playSong('{{song}}')" href="javascript:void(0);">{{song}}</a></li>
+    {% endfor %}
+    </ul>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            Results:
+            <pre>
+                {% for message in messages %}
+{{ message }}
+                {% endfor %}
+            </pre>
+        {% endif %}
+    {% endwith %}
+    {% for song in songs %}
+    <script type="text/javascript">
+        function playSong(song){
+            $('audio').attr('src', '/static/music/'+song);
+        }
+    </script>
+    {% endfor %}
+    </div>
+
+    <div class="span8">
+        <br />
+        <h1>here is the zone of span8</h1>
+    </div>
+{% endblock %}
+{% block nav %}
+<li><a href="{{url_for('index')}}">back</a></li>
+{% endblock %}
