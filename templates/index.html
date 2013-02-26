@@ -2,17 +2,14 @@
 {% block body %}
     <h1>Hello!</h1>
     {% if 'username' in session %}
-        <p>Welcome!<strong>{{session['username']}}</strong>!</p>
+        <p>こんにちは!<strong>{{session['username']}}</strong>!</p>
     {% else %}
-        <p class='login'>A login is required:</p>
-        <!-- <p>ご利用にはログインが必要です</p> -->
+        <p class='login'>ログインが必要です:</p>
         <form action="{{url_for('index')}}" method="post">
             <p class="username">username:<br />
             <input type="text" name="username" /></p>
             <p class="passwd">password:<br />
             <input type="password" name="passwd" /></p>
-            <!-- <p class="submit"><input type="submit" value="submit" /></p> -->
-            <!-- <input type="checkbox"> -->
             <div class="control-group">
             <div class="controls">
             <input type="submit" value="submit" class="btn">

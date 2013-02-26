@@ -2,14 +2,15 @@
 
 {% extends "base_test.html" %}
 {% block body %}
+<script src="../static/jquery-1.9.0.min.js"></script>
+
 <div id='animateField'>
-<img src='../static/img/koukaku1.png'>
+<!-- <img src='../static/img/koukaku1.png'> -->
 </div>
 
-<p>this is color test</p>
-<script src="../static/jquery-1.9.0.min.js"></script>
+<!--
 <script>
-$(function(){
+ $(function(){
     var count = setInterval(changeImg, 3000);//2秒間隔
     i = 1;
     function changeImg(){
@@ -22,6 +23,6 @@ $(function(){
         }
     }
 });
-
 </script>
+-->
 {% endblock %}
