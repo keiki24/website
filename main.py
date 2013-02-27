@@ -10,7 +10,6 @@ app.secret_key = 'secret'
 
 users = {'user':'pass'} 
 HOST = '127.0.0.1'
-# HOST = '192.168.11.16'
 PORT = 8000
 
 class Main(flask.views.MethodView):
